@@ -1,9 +1,12 @@
 <body style="color: yellow;">
   <h1 style="margin-left: 100px; margin-top: 100px;">This is a test!</h1>
   <script>
-    let params = (new URL(document.location)).searchParams;
-    let token = params.get('token'); 
-    let tokenName = params.get('tokenName'); 
-    console.log({token, tokenName});
+    const run = () = {
+      let params = (new URL(document.location)).searchParams;
+      let token = params.get('token'); 
+      let tokenName = params.get('tokenName'); 
+      if (!token || !tokenName) return; 
+      console.log({token, tokenName});
+    }
   </script>  
 </body>
