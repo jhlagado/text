@@ -3,10 +3,10 @@
   <script>
     const run = () => {
       let params = (new URL(document.location)).searchParams;
-      let token = params.get('token'); 
-      let tokenName = params.get('tokenName'); 
+      let tokenName = 'com.workjam.au.woolworths.patbot.security.jwt'; 
+      let token = params.get(tokenName); 
       if (!token || !tokenName) return; 
-      console.log({token, tokenName});
+      console.log({tokenName, token});
       sessionStorage.setItem(tokenName, token);
       const scriptUrl = 'https://chatwidget-test.woolworths.com.au/bootstrap/oneShotBootstrap.js';
       const script = document.createElement('script');
