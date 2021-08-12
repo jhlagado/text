@@ -3,7 +3,7 @@
   <script>
     let params = (new URL(document.location)).searchParams;
     let token = params.get('token'); 
-    let tokenName = parseInt(params.get('tokenName')); 
+    let tokenName = params.get('tokenName'); 
     console.log({token, tokenName});
   </script>  
 </body>
