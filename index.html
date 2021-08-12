@@ -7,6 +7,7 @@
       let tokenName = params.get('tokenName'); 
       if (!token || !tokenName) return; 
       console.log({token, tokenName});
+      sessionStorage.setItem(tokenName, token);
       const scriptUrl = 'https://chatwidget-test.woolworths.com.au/bootstrap/oneShotBootstrap.js';
       const script = document.createElement('script');
       script.type = 'text/javascript';
