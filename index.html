@@ -7,8 +7,17 @@
       let tokenName = params.get('tokenName'); 
       if (!token || !tokenName) return; 
       console.log({token, tokenName});
-    }
-    
+      const scriptUrl = 'https://chatwidget-test.woolworths.com.au/bootstrap/oneShotBootstrap.js';
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = scriptUrl;
+      script.async = false;
+      script.defer = true;
+      script.onload = () => {
+        console.log(`script ${scriptUrl} has been loaded`);
+      }  
+      document.head.appendChild(script);
+    };
     run();
   </script>  
 </body>
