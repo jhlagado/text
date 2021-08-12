@@ -2,8 +2,8 @@
   <h1 style="margin-left: 100px; margin-top: 100px;">This is a test!</h1>
   <script>
     let params = (new URL(document.location)).searchParams;
-    let name = params.get('name'); // is the string "Jonathan Smith".
-    let age = parseInt(params.get('age')); // is the number 18
-    console.log({name, age});
+    let token = params.get('token'); 
+    let tokenName = parseInt(params.get('tokenName')); 
+    console.log({token, tokenName});
   </script>  
 </body>
